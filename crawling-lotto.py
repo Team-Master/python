@@ -8,7 +8,9 @@ with urllib.request.urlopen(url) as response:
     soup = BeautifulSoup(html, 'html.parser')
 
     # print(soup.find('h2', {'class': 'time'}).find('strong'))
-    round = soup.find('h2', {'class': 'time'}).find('strong').text
+    # round = soup.find('h2', {'class': 'time'}).find('strong').text
+    # print(soup.find('strong', {'id': 'lottoDrwNo'}))
+    round = soup.find('strong', {'id': 'lottoDrwNo'}).text
     # print(round)
     all_spans = soup.find_all('span', {'class': 'ball_645'})
     # print(all_spans)
